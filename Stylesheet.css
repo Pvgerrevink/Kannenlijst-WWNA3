@@ -1,0 +1,26 @@
+.btn {
+  margin-right: 25px !important;
+  margin-left: 25px !important;
+}
+.spelernaam {
+  text-align: center;
+  width: 125px;
+}
+input {
+  width: 50px;
+  border: none;
+}
+.container-fluid {
+  margin-bottom: 15px;
+}
+.total {
+  position: fixed;
+  right: 30%;
+  top: 25%;
+}
+.col {
+  display: inline-flex !important;
+}
+.top {
+  margin: 30px 0px 40px 0px !important;
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="Stylesheet.css">
+  <link rel="rel icon" type="image/png" href="Favicon/favicon.ico" />
+  <title>Kannenlijst WWNA 3</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="Images/wwna.png" style="width: 22%" height="30" alt="">
+    </a>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <button id="save" class="btn btn-dark">Bewaar voorraad</button>
+      <button id="retrieve" class="btn btn-dark">Haal voorraad op</button>
+    </div>
+  </div>
+
+  <div class="container top">
+    <div class="row">
+      <button type="button" class="btn btn-primary" id="bereken">
+        Totaal aantal kannen <span class="badge badge-light" id="totaalKannen"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler1" class="decrement-speler1">-</button>
+        <p class="spelernaam">Bart</p>
+        <button type="button" class="btn btn-success" id="speler1" class="increment-speler1">+</button>
+        <input id="speler1-voorraad" class="subtotaal" value="0"></input>
+        <input id="speler1-storage"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler8" class="decrement-speler8">-</button>
+        <p class="spelernaam">Bayram</p>
+        <button type="button" class="btn btn-success" id="speler8" class="increment-speler8">+</button>
+        <input id="speler8-voorraad" class="subtotaal" value="0"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler18" class="decrement-speler18">-</button>
+        <p class="spelernaam">Beumer</p class="subtotaal">
+        <button type="button" class="btn btn-success" id="speler18" class="increment-speler18">+</button>
+        <input id="speler18-voorraad" value="0" class="subtotaal"></input>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler15" class="decrement-speler15">-</button>
+        <p class="spelernaam">Bjorn</p>
+        <button type="button" class="btn btn-success" id="speler15" class="increment-speler15">+</button>
+        <input id="speler15-voorraad" value="0" class="subtotaal"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler14" class="decrement-speler14">-</button>
+        <p class="spelernaam">Bram</p>
+        <button type="button" class="btn btn-success" id="speler14" class="increment-speler14">+</button>
+        <input id="speler14-voorraad" value="0" class="subtotaal"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler12" class="decrement-speler12">-</button>
+        <p class="spelernaam">Boa</p>
+        <button type="button" class="btn btn-success" id="speler12" class="increment-speler12">+</button>
+        <input id="speler12-voorraad" class="subtotaal" value="0"></input>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler22" class="decrement-speler22"
+          class="subtotaal">-</button>
+        <p class="spelernaam">Daniel</p>
+        <button type="button" class="btn btn-success" id="speler22" class="increment-speler22">+</button>
+        <input id="speler22-voorraad" value="0" class="subtotaal"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler6" class="decrement-speler6">-</button>
+        <p class="spelernaam">Dennis</p>
+        <button type="button" class="btn btn-success" id="speler6" class="increment-speler6">+</button>
+        <input id="speler6-voorraad" class="subtotaal" value="0"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler9" class="decrement-speler9">-</button>
+        <p class="spelernaam">Erik</p>
+        <button type="button" class="btn btn-success" id="speler9" class="increment-speler9">+</button>
+        <input id="speler9-voorraad" class="subtotaal" value="0"></input>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler7" class="decrement-speler7">-</button>
+        <p class="spelernaam">Hans</p>
+        <button type="button" class="btn btn-success" id="speler7" class="increment-speler7">+</button>
+        <input id="speler7-voorraad" class="subtotaal" value="0"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler3" class="decrement-speler3">-</button>
+        <p class="spelernaam">Maarten</p>
+        <button type="button" class="btn btn-success" id="speler3" class="increment-speler3">+</button>
+        <input id="speler3-voorraad" class="subtotaal" value="0"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler5" class="decrement-speler5">-</button>
+        <p class="spelernaam">Marco</p>
+        <button type="button" class="btn btn-success" id="speler5" class="increment-speler3">+</button>
+        <input id="speler5-voorraad" class="subtotaal" value="0"></input>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler10" class="decrement-speler10">-</button>
+        <p class="spelernaam">Maxwell</p>
+        <button type="button" class="btn btn-success" id="speler10" class="increment-speler10">+</button>
+        <input id="speler10-voorraad" class="subtotaal" value="0"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler17" class="decrement-speler17">-</button>
+        <p class="spelernaam">Mickael</p>
+        <button type="button" class="btn btn-success" id="speler17" class="increment-speler17">+</button>
+        <input id="speler17-voorraad" class="subtotaal" value="0"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler13" class="decrement-speler13">-</button>
+        <p class="spelernaam">Paul</p>
+        <button type="button" class="btn btn-success" id="speler13" class="increment-speler13">+</button>
+        <input id="speler13-voorraad" value="0" class="subtotaal"></input>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler2" class="decrement-speler2">-</button>
+        <p class="spelernaam">Peter</p>
+        <button type="button" class="btn btn-success" id="speler2" class="increment-speler2">+</button>
+        <input id="speler2-voorraad" class="subtotaal" value="0"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler4" class="decrement-speler4">-</button>
+        <p class="spelernaam">Remy</p>
+        <button type="button" class="btn btn-success" id="speler4" class="increment-spe</div>ler3">+</button>
+        <input id="speler4-voorraad" class="subtotaal" value="0"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler20" class="decrement-speler20">-</button>
+        <p class="spelernaam">Ronald</p>
+        <button type="button" class="btn btn-success" id="speler20" class="increment-speler20">+</button>
+        <input id="speler20-voorraad" value="0" class="subtotaal"></input>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler21" class="decrement-speler21">-</button>
+        <p class="spelernaam">Rutger</p>
+        <button type="button" class="btn btn-success" id="speler21" class="increment-speler21">+</button>
+        <input id="speler21-voorraad" value="0" class="subtotaal"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler11" class="decrement-speler11">-</button>
+        <p class="spelernaam">Sander</p>
+        <button type="button" class="btn btn-success" id="speler11" class="increment-speler11">+</button>
+        <input id="speler11-voorraad" value="0" class="subtotaal"></input>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler16" class="decrement-speler16">-</button>
+        <p class="spelernaam">Jurgen</p>
+        <button type="button" class="btn btn-success" id="speler16" class="increment-speler16">+</button>
+        <input id="speler16-voorraad" value="0" class="subtotaal"></input>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger" id="speler19" class="decrement-speler19">-</button>
+        <p class="spelernaam">Zweekhorst</p>
+        <button type="button" class="btn btn-success" id="speler19" class="increment-speler19">+</button>
+        <input id="speler19-voorraad" value="0" class="subtotaal"></input>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="col-md-8">
+      <div class="rating-progress-bars p-3">
+        <div class="progress-1 align-items-center">
+          <div class="progress">
+            <div class="progress-bar bg-warning" id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $('#save').on('click', function(){
+$('.subtotaal').each(function(){    
+    var id = $(this).attr('id');
+    var value = $(this).val();
+   localStorage.setItem(id, value);
+
+});
+    });   
+</script>
+<script>
+$('#retrieve').on('click', function(){
+$('.subtotaal').each(function(){    
+    var id = $(this).attr('id');
+    var value = localStorage.getItem(id);
+
+    $(this).val(value);
+    console.log(value);
+
+}); 
+});
+  </script>
+
+  
+  <script>
+    $('.btn-success').click(function () {
+      let getID = $(this).attr("id");
+      let buildID = "#" + getID + "-voorraad";
+      counter = $(buildID).val();
+      counter++;
+      $(buildID).val(counter);
+
+    });
+    $('.btn-danger').click(function () {
+      let getID = $(this).attr("id");
+      let buildID = "#" + getID + "-voorraad";
+
+      counter = $(buildID).val();
+      counter--;
+      $(buildID).val(counter);
+    });
+    $('#bereken').click(function () {
+      var sum = 0;
+      $('.subtotaal').each(function () {
+        sum += Number($(this).val());
+      });
+      $('#totaalKannen').html(sum);
+      $('#progress').css("width", sum + "%");
+      $('#progress').html(sum + "%");
+    });
+
+    // here, you have your sum​​​​​
+
+  </script>
+
+</body>
+
+</html>
